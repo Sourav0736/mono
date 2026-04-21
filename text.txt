@@ -1,3 +1,11 @@
 Invoke-RestMethod -Method Post -Uri http://localhost:5000/students -ContentType "application/json" -Body '{"name":"Alice","roll":"CS001"}'
 
 Remove-Item -Recurse -Force .git
+
+mkdir .github
+mkdir .github\workflows
+notepad .github\workflows\docker-publish.yml
+
+git add .
+git commit -m "Retry workflow"
+git push origin main
