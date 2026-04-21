@@ -12,3 +12,8 @@ git push origin main
 
 docker build --no-cache -t hemswor/flask-app:latest .
 docker run --rm -p 5000:5000 hemswor/flask-app:latest
+
+docker build -t flask-container .
+docker run -d -p 5000:5000 --name myflask flask-container
+docker ps
+# Visit http://localhost:5000
