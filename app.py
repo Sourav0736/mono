@@ -4,6 +4,10 @@ app = Flask(__name__)
 students = {}
 next_id = 1
 
+@app.route('/')
+def home():
+    return "Hello from Dockerised Flask!"
+
 @app.route('/students', methods=['GET'])
 def get_students():
     return jsonify(list(students.values()))
