@@ -9,3 +9,6 @@ notepad .github\workflows\docker-publish.yml
 git add .
 git commit -m "Retry workflow"
 git push origin main
+
+docker build --no-cache -t hemswor/flask-app:latest .
+docker run --rm -p 5000:5000 hemswor/flask-app:latest
